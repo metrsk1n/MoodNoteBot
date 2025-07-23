@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedEmoji = document.getElementById('selected-emoji');
     const emojiName = document.getElementById('emoji-name');
     const closeBtn = document.getElementById('close-btn');
-    const themeSelect = document.getElementById('theme');
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const langButtons = document.querySelectorAll('.lang-btn');
 
-    // Fetch emoji.json (placeholder for dynamic loading)
+    // Load emoji.json
     fetch('emoji.json')
         .then(response => response.json())
         .then(data => {
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading emojis:', error));
 
-    // Navbar section switching
+    // Section switching
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const sectionId = button.dataset.section;
@@ -44,8 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Theme toggle
-    themeSelect.addEventListener('change', (e) => {
-        document.body.className = e.target.value;
+    themeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const theme = button.dataset.theme;
+            document.body.className = theme;
+            themeButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+
+    // Language selection (placeholder)
+    langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
     });
 
     // Telegram WebApp integration
