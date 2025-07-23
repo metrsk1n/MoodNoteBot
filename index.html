@@ -3,81 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood App</title>
+    <title>MoodVibe</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="app-container">
         <main id="main-content">
             <section id="emotions" class="section active">
-                <h1>Choose Your Mood</h1>
+                <h1>What's Your Vibe Today?</h1>
                 <div class="emoji-grid" id="emoji-grid"></div>
             </section>
             <section id="memes" class="section">
-                <h1>Memes</h1>
-                <p>Explore funny memes!</p>
+                <h1>Memes to Lift You Up</h1>
+                <p>Dive into the fun!</p>
             </section>
             <section id="videos" class="section">
-                <h1>Videos</h1>
-                <p>Watch inspiring videos!</p>
+                <h1>Inspiring Videos</h1>
+                <p>Feel the motivation!</p>
             </section>
             <section id="tips" class="section">
-                <h1>Tips</h1>
-                <p>Get helpful advice!</p>
+                <h1>Wellness Tips</h1>
+                <p>Boost your mood!</p>
             </section>
             <section id="unique" class="section">
-                <h1>Unique Content</h1>
-                <p>Premium content locked. Subscribe to access!</p>
-                <div class="plan-options">
-                    <button class="plan-btn" data-plan="daily">Daily</button>
-                    <button class="plan-btn" data-plan="weekly">Weekly</button>
-                    <button class="plan-btn" data-plan="monthly">Monthly</button>
-                    <button class="plan-btn" data-plan="yearly">Yearly</button>
+                <h1>Exclusive Vibes</h1>
+                <p>Unlock premium content with Telegram Stars!</p>
+                <div class="plan-grid">
+                    <div class="plan-card" data-plan="daily">
+                        <span class="plan-icon">🌅</span>
+                        <h3>Daily</h3>
+                        <p class="price">⭐ 30</p>
+                    </div>
+                    <div class="plan-card popular" data-plan="weekly">
+                        <span class="plan-badge">Save 29%</span>
+                        <span class="plan-icon">📅</span>
+                        <h3>Weekly</h3>
+                        <p class="price">⭐ 150 <span class="old-price">210</span></p>
+                    </div>
+                    <div class="plan-card" data-plan="monthly">
+                        <span class="plan-badge">Save 20%</span>
+                        <span class="plan-icon">🗓️</span>
+                        <h3>Monthly</h3>
+                        <p class="price">⭐ 720 <span class="old-price">900</span></p>
+                    </div>
+                    <div class="plan-card best-value" data-plan="yearly">
+                        <span class="plan-badge">Save 37%</span>
+                        <span class="plan-icon">🎯</span>
+                        <h3>Yearly</h3>
+                        <p class="price">⭐ 6888 <span class="old-price">10950</span></p>
+                    </div>
                 </div>
             </section>
             <section id="settings" class="section">
                 <h1>Settings</h1>
-                <div class="settings-option">
-                    <label for="language">Language:</label>
-                    <select id="language">
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="en">🇺🇸 English</option>
-                        <option value="zh">🇨🇳 中文</option>
-                        <option value="de">🇩🇪 Deutsch</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                        <option value="ko">🇰🇷 한국어</option>
-                        <option value="pl">🇵🇱 Polski</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                    </select>
+                <div class="settings-card">
+                    <label>Language</label>
+                    <div class="language-grid">
+                        <button class="lang-btn" data-lang="ru">🇷🇺 Русский</button>
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                        <button class="lang-btn" data-lang="ja">🇯🇵 日本語</button>
+                        <button class="lang-btn" data-lang="ko">🇰🇷 한국어</button>
+                        <button class="lang-btn" data-lang="pl">🇵🇱 Polski</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
+                    </div>
                 </div>
-                <div class="settings-option">
-                    <label for="theme">Theme:</label>
-                    <select id="theme">
-                        <option value="dark">Dark</option>
-                        <option value="light">Light</option>
-                    </select>
+                <div class="settings-card">
+                    <label>Theme</label>
+                    <div class="theme-toggle">
+                        <button class="theme-btn active" data-theme="dark">Dark</button>
+                        <button class="theme-btn" data-theme="light">Light</button>
+                    </div>
                 </div>
             </section>
         </main>
-        <nav class="navbar">
-            <button class="nav-btn active" data-section="emotions">🧠</button>
-            <button class="nav-btn" data-section="memes">🤣</button>
-            <button class="nav-btn" data-section="videos">🎥</button>
-            <button class="nav-btn" data-section="tips">💡</button>
-            <button class="nav-btn" data-section="unique">🧬</button>
-            <button class="nav-btn" data-section="settings">⚙️</button>
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-section="emotions" title="Emotions">🧠</button>
+            <button class="nav-btn" data-section="memes" title="Memes">🤣</button>
+            <button class="nav-btn" data-section="videos" title="Videos">🎥</button>
+            <button class="nav-btn" data-section="tips" title="Tips">💡</button>
+            <button class="nav-btn" data-section="unique" title="Unique">🧬</button>
+            <button class="nav-btn" data-section="settings" title="Settings">⚙️</button>
         </nav>
         <div class="modal" id="emoji-modal">
             <div class="modal-content">
                 <span class="emoji-display" id="selected-emoji"></span>
                 <h2 id="emoji-name"></h2>
-                <div class="modal-buttons">
-                    <button id="share-btn">Share</button>
-                    <button id="more-btn">More</button>
-                    <button id="close-btn">Close</button>
+                <div class="modal-actions">
+                    <button class="action-btn" id="share-btn">Share</button>
+                    <button class="action-btn" id="more-btn">More</button>
+                    <button class="action-btn secondary" id="close-btn">Close</button>
                 </div>
             </div>
         </div>
