@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +8,246 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="app">
-        <!-- Loading Screen -->
-        <div id="loading" class="screen active">
-            <div class="loading-content">
-                <div class="loading-emoji">🌟</div>
-                <p>Загружаем эмоции...</p>
-            </div>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🎭</div>
+            <div class="loading-text">MoodNote</div>
+            <div class="loading-spinner"></div>
         </div>
+    </div>
 
-        <!-- Main Categories Screen -->
-        <div id="categories" class="screen">
-            <header class="header">
-                <h1>Как ты себя чувствуешь?</h1>
-                <p class="subtitle">Выбери категорию эмоций</p>
-            </header>
-            <div class="categories-grid" id="categoriesGrid">
-                <!-- Categories will be loaded here -->
-            </div>
+    <!-- Language Selector -->
+    <div id="languageSelector" class="language-selector hidden">
+        <div class="language-header">
+            <h2 data-key="selectLanguage">Select Language</h2>
         </div>
-
-        <!-- Emotions Screen -->
-        <div id="emotions" class="screen">
-            <header class="header">
-                <button class="back-btn" id="backToCategories">
-                    <span class="back-icon">←</span>
-                </button>
-                <h2 id="categoryTitle">Эмоции</h2>
-            </header>
-            <div class="emotions-grid" id="emotionsGrid">
-                <!-- Emotions will be loaded here -->
-            </div>
+        <div class="language-grid">
+            <button class="language-btn" data-lang="en">🇺🇸 English</button>
+            <button class="language-btn" data-lang="ru">🇷🇺 Русский</button>
+            <button class="language-btn" data-lang="zh">🇨🇳 中文</button>
+            <button class="language-btn" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="language-btn" data-lang="es">🇪🇸 Español</button>
+            <button class="language-btn" data-lang="ja">🇯🇵 日本語</button>
+            <button class="language-btn" data-lang="ko">🇰🇷 한국어</button>
+            <button class="language-btn" data-lang="pl">🇵🇱 Polski</button>
+            <button class="language-btn" data-lang="fr">🇫🇷 Français</button>
+            <button class="language-btn" data-lang="ar">🇸🇦 العربية</button>
         </div>
+    </div>
 
-        <!-- Result Screen -->
-        <div id="result" class="screen">
-            <header class="header">
-                <button class="back-btn" id="backToEmotions">
-                    <span class="back-icon">←</span>
-                </button>
-            </header>
-            <div class="result-content">
-                <div class="emotion-display">
-                    <div class="emotion-emoji" id="selectedEmoji">😊</div>
-                    <h2 class="emotion-name" id="selectedEmotion">Радость</h2>
+    <!-- Main App Container -->
+    <div id="mainApp" class="main-app hidden">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🎭</span>
+                    <span class="logo-text">MoodNote</span>
                 </div>
-                <div class="quote-container">
-                    <div class="quote-text" id="quoteText">
-                        Улыбка — это кривая, которая всё выпрямляет.
+                <div class="header-actions">
+                    <button class="premium-btn" id="premiumBtn">
+                        <span class="premium-icon">✨</span>
+                        <span data-key="premium">Premium</span>
+                    </button>
+                    <button class="settings-btn" id="settingsBtn">⚙️</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Home Screen -->
+            <div id="homeScreen" class="screen active">
+                <div class="mood-selector">
+                    <h1 class="mood-title" data-key="howAreYouFeeling">How are you feeling today?</h1>
+                    <div class="mood-categories" id="moodCategories">
+                        <!-- Mood categories will be loaded from emoji.json -->
                     </div>
                 </div>
-                <div class="action-buttons">
-                    <button class="btn-secondary" id="newQuoteBtn">
-                        🎲 Ещё
-                    </button>
-                    <button class="btn-primary" id="shareBtn">
-                        📤 Поделиться
-                    </button>
+            </div>
+
+            <!-- Mood Variants Screen -->
+            <div id="variantsScreen" class="screen">
+                <div class="variants-container">
+                    <div class="variants-header">
+                        <button class="back-btn" id="variantsBackBtn">←</button>
+                        <div class="selected-category">
+                            <span class="category-emoji" id="selectedCategoryEmoji"></span>
+                            <span class="category-text" id="selectedCategoryText"></span>
+                        </div>
+                    </div>
+                    <div class="variants-grid" id="variantsGrid">
+                        <!-- Variants will be loaded dynamically -->
+                    </div>
                 </div>
+            </div>
+
+            <!-- Content Screen -->
+            <div id="contentScreen" class="screen">
+                <div class="content-card">
+                    <div class="content-header">
+                        <button class="back-btn" id="contentBackBtn">←</button>
+                        <div class="selected-mood">
+                            <span class="mood-emoji" id="selectedMoodEmoji"></span>
+                            <span class="mood-text" id="selectedMoodText"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-body" id="contentBody">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                    
+                    <div class="content-actions">
+                        <button class="action-btn secondary" id="moreBtn">
+                            <span class="btn-icon">🔄</span>
+                            <span data-key="more">More</span>
+                        </button>
+                        <button class="action-btn primary" id="shareBtn">
+                            <span class="btn-icon">📤</span>
+                            <span data-key="share">Share</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Screen -->
+            <div id="premiumScreen" class="screen">
+                <div class="premium-container">
+                    <div class="premium-header">
+                        <button class="back-btn" id="premiumBackBtn">←</button>
+                        <h2 data-key="premiumTitle">Premium Features</h2>
+                    </div>
+                    <div class="premium-plans">
+                        <div class="premium-plan" data-plan="daily">
+                            <div class="plan-icon">🌅</div>
+                            <h3 data-key="dailyPlan">Daily</h3>
+                            <div class="plan-price">⭐ 5</div>
+                            <div class="plan-duration" data-key="oneDay">1 Day</div>
+                        </div>
+                        <div class="premium-plan popular" data-plan="weekly">
+                            <div class="plan-badge" data-key="popular">Popular</div>
+                            <div class="plan-icon">📅</div>
+                            <h3 data-key="weeklyPlan">Weekly</h3>
+                            <div class="plan-price">⭐ 25</div>
+                            <div class="plan-duration" data-key="oneWeek">7 Days</div>
+                        </div>
+                        <div class="premium-plan" data-plan="monthly">
+                            <div class="plan-icon">🗓️</div>
+                            <h3 data-key="monthlyPlan">Monthly</h3>
+                            <div class="plan-price">⭐ 80</div>
+                            <div class="plan-duration" data-key="oneMonth">30 Days</div>
+                        </div>
+                        <div class="premium-plan best-value" data-plan="yearly">
+                            <div class="plan-badge" data-key="bestValue">Best Value</div>
+                            <div class="plan-icon">🎯</div>
+                            <h3 data-key="yearlyPlan">Yearly</h3>
+                            <div class="plan-price">⭐ 500</div>
+                            <div class="plan-duration" data-key="oneYear">365 Days</div>
+                        </div>
+                    </div>
+                    <div class="premium-features">
+                        <h3 data-key="premiumIncludes">Premium Includes:</h3>
+                        <ul class="features-list">
+                            <li data-key="unlimitedContent">🔓 Unlimited content access</li>
+                            <li data-key="exclusiveQuotes">💎 Exclusive quotes & wisdom</li>
+                            <li data-key="premiumMemes">🎭 Premium memes & videos</li>
+                            <li data-key="personalizedTips">🎯 Personalized tips</li>
+                            <li data-key="adFree">🚫 Ad-free experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-tab="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label" data-key="home">Home</span>
+            </button>
+            <button class="nav-item" data-tab="memes">
+                <span class="nav-icon">😂</span>
+                <span class="nav-label" data-key="memes">Memes</span>
+            </button>
+            <button class="nav-item" data-tab="videos">
+                <span class="nav-icon">📹</span>
+                <span class="nav-label" data-key="videos">Videos</span>
+            </button>
+            <button class="nav-item" data-tab="tips">
+                <span class="nav-icon">💡</span>
+                <span class="nav-label" data-key="tips">Tips</span>
+            </button>
+            <button class="nav-item" data-tab="unique">
+                <span class="nav-icon">✨</span>
+                <span class="nav-label" data-key="unique">Unique</span>
+            </button>
+        </nav>
+
+        <!-- Tab Content Screens -->
+        <div id="memesTab" class="tab-screen">
+            <div class="tab-header">
+                <h2 data-key="memesTitle">Mood Memes</h2>
+            </div>
+            <div class="memes-grid" id="memesGrid">
+                <!-- Memes will be loaded here -->
+            </div>
+        </div>
+
+        <div id="videosTab" class="tab-screen">
+            <div class="tab-header">
+                <h2 data-key="videosTitle">Motivational Videos</h2>
+            </div>
+            <div class="videos-grid" id="videosGrid">
+                <!-- Videos will be loaded here -->
+            </div>
+        </div>
+
+        <div id="tipsTab" class="tab-screen">
+            <div class="tab-header">
+                <h2 data-key="tipsTitle">Wellness Tips</h2>
+            </div>
+            <div class="tips-list" id="tipsList">
+                <!-- Tips will be loaded here -->
+            </div>
+        </div>
+
+        <div id="uniqueTab" class="tab-screen">
+            <div class="tab-header">
+                <h2 data-key="uniqueTitle">Unique Content</h2>
+                <div class="premium-required" id="premiumRequired">
+                    <span class="premium-lock">🔒</span>
+                    <span data-key="premiumOnly">Premium Only</span>
+                </div>
+            </div>
+            <div class="unique-content" id="uniqueContent">
+                <!-- Premium content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="paymentModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-key="paymentTitle">Complete Payment</h3>
+                <button class="modal-close" id="paymentClose">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="payment-info">
+                    <div class="payment-item">
+                        <span data-key="item">Item:</span>
+                        <span id="paymentItem"></span>
+                    </div>
+                    <div class="payment-price">
+                        <span data-key="price">Price:</span>
+                        <span id="paymentPrice"></span>
+                    </div>
+                </div>
+                <button class="payment-btn" id="confirmPayment">
+                    <span class="payment-icon">⭐</span>
+                    <span data-key="payWithStars">Pay with Telegram Stars</span>
+                </button>
             </div>
         </div>
     </div>
