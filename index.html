@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodNoteBot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Loading Screen -->
+        <div id="loading" class="screen active">
+            <div class="loading-content">
+                <div class="loading-emoji">🌟</div>
+                <p>Загружаем эмоции...</p>
+            </div>
+        </div>
+
+        <!-- Main Categories Screen -->
+        <div id="categories" class="screen">
+            <header class="header">
+                <h1>Как ты себя чувствуешь?</h1>
+                <p class="subtitle">Выбери категорию эмоций</p>
+            </header>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Emotions Screen -->
+        <div id="emotions" class="screen">
+            <header class="header">
+                <button class="back-btn" id="backToCategories">
+                    <span class="back-icon">←</span>
+                </button>
+                <h2 id="categoryTitle">Эмоции</h2>
+            </header>
+            <div class="emotions-grid" id="emotionsGrid">
+                <!-- Emotions will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result" class="screen">
+            <header class="header">
+                <button class="back-btn" id="backToEmotions">
+                    <span class="back-icon">←</span>
+                </button>
+            </header>
+            <div class="result-content">
+                <div class="emotion-display">
+                    <div class="emotion-emoji" id="selectedEmoji">😊</div>
+                    <h2 class="emotion-name" id="selectedEmotion">Радость</h2>
+                </div>
+                <div class="quote-container">
+                    <div class="quote-text" id="quoteText">
+                        Улыбка — это кривая, которая всё выпрямляет.
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="newQuoteBtn">
+                        🎲 Ещё
+                    </button>
+                    <button class="btn-primary" id="shareBtn">
+                        📤 Поделиться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
