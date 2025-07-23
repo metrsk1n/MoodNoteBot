@@ -1,0 +1,392 @@
+{
+  "ru": {
+    "sections": {
+      "emotions": "Какое у тебя настроение?",
+      "memes": "Мемы для поднятия духа",
+      "videos": "Вдохновляющие видео",
+      "tips": "Советы для хорошего настроения",
+      "unique": "Эксклюзивные виброны",
+      "community": "Сообщество настроений",
+      "settings": "Настройки"
+    },
+    "buttons": {
+      "share": "Поделиться",
+      "more": "Ещё",
+      "close": "Закрыть",
+      "like": "Нравится",
+      "comment": "Комментарий",
+      "post": "Опубликовать",
+      "buy": "Купить",
+      "daily": "Дневной",
+      "weekly": "Недельный", 
+      "monthly": "Месячный",
+      "yearly": "Годовой"
+    },
+    "content": {
+      "premium_description": "Разблокируй премиум контент с Telegram Stars!",
+      "mood_selected": "Настроение выбрано",
+      "loading": "Загрузка...",
+      "no_content": "Контент скоро появится",
+      "community_empty": "Пока никто не поделился настроением",
+      "post_placeholder": "Расскажите о своём настроении..."
+    },
+    "settings": {
+      "language": "Язык",
+      "theme": "Тема",
+      "dark": "Тёмная",
+      "light": "Светлая",
+      "notifications": "Уведомления"
+    }
+  },
+  "en": {
+    "sections": {
+      "emotions": "What's Your Vibe Today?",
+      "memes": "Memes to Lift You Up", 
+      "videos": "Inspiring Videos",
+      "tips": "Wellness Tips",
+      "unique": "Exclusive Vibes",
+      "community": "Mood Community",
+      "settings": "Settings"
+    },
+    "buttons": {
+      "share": "Share",
+      "more": "More",
+      "close": "Close",
+      "like": "Like",
+      "comment": "Comment", 
+      "post": "Post",
+      "buy": "Buy",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly", 
+      "yearly": "Yearly"
+    },
+    "content": {
+      "premium_description": "Unlock premium content with Telegram Stars!",
+      "mood_selected": "Mood selected",
+      "loading": "Loading...",
+      "no_content": "Content coming soon",
+      "community_empty": "No one has shared their mood yet",
+      "post_placeholder": "Share your mood..."
+    },
+    "settings": {
+      "language": "Language",
+      "theme": "Theme", 
+      "dark": "Dark",
+      "light": "Light",
+      "notifications": "Notifications"
+    }
+  },
+  "zh": {
+    "sections": {
+      "emotions": "今天心情如何？",
+      "memes": "提升心情的表情包",
+      "videos": "励志视频", 
+      "tips": "心理健康小贴士",
+      "unique": "专属内容",
+      "community": "心情社区",
+      "settings": "设置"
+    },
+    "buttons": {
+      "share": "分享",
+      "more": "更多",
+      "close": "关闭",
+      "like": "点赞",
+      "comment": "评论",
+      "post": "发布",
+      "buy": "购买",
+      "daily": "每日",
+      "weekly": "每周",
+      "monthly": "每月",
+      "yearly": "每年"
+    },
+    "content": {
+      "premium_description": "用 Telegram Stars 解锁高级内容！",
+      "mood_selected": "心情已选择",
+      "loading": "加载中...",
+      "no_content": "内容即将推出",
+      "community_empty": "还没有人分享心情",
+      "post_placeholder": "分享你的心情..."
+    },
+    "settings": {
+      "language": "语言",
+      "theme": "主题",
+      "dark": "深色",
+      "light": "浅色", 
+      "notifications": "通知"
+    }
+  },
+  "de": {
+    "sections": {
+      "emotions": "Wie ist deine Stimmung heute?",
+      "memes": "Memes zum Aufmuntern",
+      "videos": "Inspirierende Videos",
+      "tips": "Wellness-Tipps",
+      "unique": "Exklusive Inhalte",
+      "community": "Stimmungs-Community",
+      "settings": "Einstellungen"
+    },
+    "buttons": {
+      "share": "Teilen",
+      "more": "Mehr",
+      "close": "Schließen",
+      "like": "Gefällt mir",
+      "comment": "Kommentar",
+      "post": "Posten",
+      "buy": "Kaufen",
+      "daily": "Täglich",
+      "weekly": "Wöchentlich",
+      "monthly": "Monatlich",
+      "yearly": "Jährlich"
+    },
+    "content": {
+      "premium_description": "Premium-Inhalte mit Telegram Stars freischalten!",
+      "mood_selected": "Stimmung ausgewählt",
+      "loading": "Wird geladen...",
+      "no_content": "Inhalte kommen bald",
+      "community_empty": "Niemand hat seine Stimmung geteilt",
+      "post_placeholder": "Teile deine Stimmung..."
+    },
+    "settings": {
+      "language": "Sprache",
+      "theme": "Design",
+      "dark": "Dunkel",
+      "light": "Hell",
+      "notifications": "Benachrichtigungen"
+    }
+  },
+  "es": {
+    "sections": {
+      "emotions": "¿Cuál es tu estado de ánimo hoy?",
+      "memes": "Memes para animarte",
+      "videos": "Videos inspiradores",
+      "tips": "Consejos de bienestar",
+      "unique": "Contenido exclusivo",
+      "community": "Comunidad de estados de ánimo",
+      "settings": "Configuración"
+    },
+    "buttons": {
+      "share": "Compartir",
+      "more": "Más",
+      "close": "Cerrar",
+      "like": "Me gusta",
+      "comment": "Comentar",
+      "post": "Publicar",
+      "buy": "Comprar",
+      "daily": "Diario",
+      "weekly": "Semanal",
+      "monthly": "Mensual",
+      "yearly": "Anual"
+    },
+    "content": {
+      "premium_description": "¡Desbloquea contenido premium con Telegram Stars!",
+      "mood_selected": "Estado de ánimo seleccionado",
+      "loading": "Cargando...",
+      "no_content": "Contenido próximamente",
+      "community_empty": "Nadie ha compartido su estado de ánimo aún",
+      "post_placeholder": "Comparte tu estado de ánimo..."
+    },
+    "settings": {
+      "language": "Idioma",
+      "theme": "Tema",
+      "dark": "Oscuro",
+      "light": "Claro",
+      "notifications": "Notificaciones"
+    }
+  },
+  "ja": {
+    "sections": {
+      "emotions": "今日の気分は？",
+      "memes": "気分を上げるミーム",
+      "videos": "インスピレーション動画",
+      "tips": "ウェルネスのヒント",
+      "unique": "限定コンテンツ",
+      "community": "気分コミュニティ",
+      "settings": "設定"
+    },
+    "buttons": {
+      "share": "シェア",
+      "more": "もっと",
+      "close": "閉じる",
+      "like": "いいね",
+      "comment": "コメント",
+      "post": "投稿",
+      "buy": "購入",
+      "daily": "日次",
+      "weekly": "週次",
+      "monthly": "月次",
+      "yearly": "年次"
+    },
+    "content": {
+      "premium_description": "Telegram Starsでプレミアムコンテンツをアンロック！",
+      "mood_selected": "気分が選択されました",
+      "loading": "読み込み中...",
+      "no_content": "コンテンツは近日公開",
+      "community_empty": "まだ誰も気分をシェアしていません",
+      "post_placeholder": "あなたの気分をシェア..."
+    },
+    "settings": {
+      "language": "言語",
+      "theme": "テーマ",
+      "dark": "ダーク",
+      "light": "ライト",
+      "notifications": "通知"
+    }
+  },
+  "ko": {
+    "sections": {
+      "emotions": "오늘 기분은 어떤가요?",
+      "memes": "기분 좋아지는 밈",
+      "videos": "영감을 주는 영상",
+      "tips": "웰니스 팁",
+      "unique": "독점 콘텐츠",
+      "community": "기분 커뮤니티",
+      "settings": "설정"
+    },
+    "buttons": {
+      "share": "공유",
+      "more": "더보기",
+      "close": "닫기",
+      "like": "좋아요",
+      "comment": "댓글",
+      "post": "게시",
+      "buy": "구매",
+      "daily": "일일",
+      "weekly": "주간",
+      "monthly": "월간",
+      "yearly": "연간"
+    },
+    "content": {
+      "premium_description": "Telegram Stars로 프리미엄 콘텐츠를 잠금해제하세요!",
+      "mood_selected": "기분이 선택되었습니다",
+      "loading": "로딩 중...",
+      "no_content": "콘텐츠 곧 출시",
+      "community_empty": "아직 아무도 기분을 공유하지 않았습니다",
+      "post_placeholder": "당신의 기분을 공유하세요..."
+    },
+    "settings": {
+      "language": "언어",
+      "theme": "테마",
+      "dark": "다크",
+      "light": "라이트",
+      "notifications": "알림"
+    }
+  },
+  "pl": {
+    "sections": {
+      "emotions": "Jaki jest twój nastrój dzisiaj?",
+      "memes": "Memy na poprawę humoru",
+      "videos": "Inspirujące wideo",
+      "tips": "Porady wellness",
+      "unique": "Ekskluzywne treści",
+      "community": "Społeczność nastrojów",
+      "settings": "Ustawienia"
+    },
+    "buttons": {
+      "share": "Udostępnij",
+      "more": "Więcej",
+      "close": "Zamknij",
+      "like": "Lubię to",
+      "comment": "Komentarz",
+      "post": "Opublikuj",
+      "buy": "Kup",
+      "daily": "Dzienny",
+      "weekly": "Tygodniowy",
+      "monthly": "Miesięczny",
+      "yearly": "Roczny"
+    },
+    "content": {
+      "premium_description": "Odblokuj premium treści z Telegram Stars!",
+      "mood_selected": "Nastrój wybrany",
+      "loading": "Ładowanie...",
+      "no_content": "Treści wkrótce",
+      "community_empty": "Nikt jeszcze nie podzielił się nastrojem",
+      "post_placeholder": "Podziel się swoim nastrojem..."
+    },
+    "settings": {
+      "language": "Język",
+      "theme": "Motyw",
+      "dark": "Ciemny",
+      "light": "Jasny",
+      "notifications": "Powiadomienia"
+    }
+  },
+  "fr": {
+    "sections": {
+      "emotions": "Quelle est votre humeur aujourd'hui?",
+      "memes": "Mèmes pour vous remonter le moral",
+      "videos": "Vidéos inspirantes",
+      "tips": "Conseils bien-être",
+      "unique": "Contenu exclusif",
+      "community": "Communauté d'humeurs",
+      "settings": "Paramètres"
+    },
+    "buttons": {
+      "share": "Partager",
+      "more": "Plus",
+      "close": "Fermer",
+      "like": "J'aime",
+      "comment": "Commenter",
+      "post": "Publier",
+      "buy": "Acheter",
+      "daily": "Quotidien",
+      "weekly": "Hebdomadaire",
+      "monthly": "Mensuel",
+      "yearly": "Annuel"
+    },
+    "content": {
+      "premium_description": "Débloquez le contenu premium avec Telegram Stars!",
+      "mood_selected": "Humeur sélectionnée",
+      "loading": "Chargement...",
+      "no_content": "Contenu bientôt disponible",
+      "community_empty": "Personne n'a encore partagé son humeur",
+      "post_placeholder": "Partagez votre humeur..."
+    },
+    "settings": {
+      "language": "Langue",
+      "theme": "Thème",
+      "dark": "Sombre",
+      "light": "Clair",
+      "notifications": "Notifications"
+    }
+  },
+  "ar": {
+    "sections": {
+      "emotions": "ما هو مزاجك اليوم؟",
+      "memes": "ميمز لرفع المعنويات",
+      "videos": "فيديوهات ملهمة",
+      "tips": "نصائح العافية",
+      "unique": "محتوى حصري",
+      "community": "مجتمع المزاج",
+      "settings": "الإعدادات"
+    },
+    "buttons": {
+      "share": "مشاركة",
+      "more": "المزيد",
+      "close": "إغلاق",
+      "like": "إعجاب",
+      "comment": "تعليق",
+      "post": "نشر",
+      "buy": "شراء",
+      "daily": "يومي",
+      "weekly": "أسبوعي",
+      "monthly": "شهري",
+      "yearly": "سنوي"
+    },
+    "content": {
+      "premium_description": "افتح المحتوى المميز بنجوم التلجرام!",
+      "mood_selected": "تم اختيار المزاج",
+      "loading": "جاري التحميل...",
+      "no_content": "المحتوى قريباً",
+      "community_empty": "لم يشارك أحد مزاجه بعد",
+      "post_placeholder": "شارك مزاجك..."
+    },
+    "settings": {
+      "language": "اللغة",
+      "theme": "المظهر",
+      "dark": "داكن",
+      "light": "فاتح",
+      "notifications": "الإشعارات"
+    }
+  }
+}
